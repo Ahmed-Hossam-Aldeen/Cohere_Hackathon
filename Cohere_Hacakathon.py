@@ -35,7 +35,7 @@ def get_hashtag(input):
       )
       output.append(Hashtag_Model.generations[0].text)
       output.append(Hashtag_Model.generations[1].text)
-      output.append(Hashtag_Model.generations[2].text)
+      #output.append(Hashtag_Model.generations[2].text)
       print(output)
       return output
 
@@ -62,6 +62,12 @@ def get_mention(input):
                     --
                     interest: Food
                     mention: Gordon Ramsy
+                    --
+                    interest: rap
+                    mention: Snoop Dogg
+                    --
+                    interest: movies
+                    mention: Netflix
                     --
                     interst: {input}
                     mention:''', 
