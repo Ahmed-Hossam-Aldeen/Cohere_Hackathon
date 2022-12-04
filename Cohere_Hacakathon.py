@@ -1,7 +1,10 @@
 import cohere
+import config
+
+co = cohere.Client("6arOhVPDx9BLudwjrgLJrS7Y2cg43LTBm8DU3DEI")
 
 def get_hashtag(input):
-      co = cohere.Client('6arOhVPDx9BLudwjrgLJrS7Y2cg43LTBm8DU3DEI')
+      
       output = [] 
 
       Hashtag_Model = co.generate(
@@ -39,7 +42,7 @@ def get_hashtag(input):
       return output
 
 def get_mention(input):
-    co = cohere.Client('6arOhVPDx9BLudwjrgLJrS7Y2cg43LTBm8DU3DEI')
+
     Mention_Model = co.generate(
         model='xlarge',
         max_tokens=10,
@@ -78,7 +81,6 @@ def get_mention(input):
 
 def text_summary(input):
     
-    co = cohere.Client('6arOhVPDx9BLudwjrgLJrS7Y2cg43LTBm8DU3DEI')
 
     Model_Summary = co.generate( 
         model='xlarge',
