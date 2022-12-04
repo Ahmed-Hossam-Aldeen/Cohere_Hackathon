@@ -58,7 +58,8 @@ if option == "Generate Hashtags":
 elif option == "Tweet Summrization":
    input = st.text_area('Enter text', height=100)
    if st.button('Summarize !'):
-        summary = f'<p style="font-family:SansSerif; color:#9AEBA3; font-size: 20px;">{text_summary(input)}</p>'
+        edited_summary = text_summary(input).replace('--', '')
+        summary = f'<p style="font-family:SansSerif; color:#9AEBA3; font-size: 20px;">{edited_summary}</p>'
         st.markdown(summary,unsafe_allow_html=True)
 
 elif option == "Twitter Handle":
