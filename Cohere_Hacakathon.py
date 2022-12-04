@@ -1,7 +1,9 @@
 import cohere
-import config
+from dotenv import load_dotenv
+import os
 
-co = cohere.Client("6arOhVPDx9BLudwjrgLJrS7Y2cg43LTBm8DU3DEI")
+load_dotenv()
+co = cohere.Client(os.getenv('api_key'))
 
 def get_hashtag(input):
       
